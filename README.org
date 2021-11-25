@@ -1,0 +1,16 @@
+#+TITLE: ballpark
+#+PROPERTY: header-args:clojure  :exports both :results output :wrap example
+#+OPTIONS: toc:nil
+
+* Ballpark
+
+Fuzzy string matching and ranking, a la Quicksilver
+
+** License
+:PROPERTIES:
+:CUSTOM_ID: license
+:END:
+
+Copyright © 2021 Joshua Davey
+
+Distributed under the Eclipse Public License version 1.0.

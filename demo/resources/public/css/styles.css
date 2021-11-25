@@ -1,0 +1,111 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+               sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+}
+#container {
+  display: flex;
+  padding: 4em 1em;
+  justify-content: center;
+  flex-flow: column;
+}
+
+#app {
+  width: 1062px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+code {
+  font-family: Consolas, monospace;
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 3px;
+}
+
+a {
+  color: #a00;
+}
+
+a:visited {
+  color: #600;
+}
+
+p {
+  line-height: 1.4;
+}
+
+b {
+  color: #555;
+}
+
+#app section {
+  width: 1020px;
+}
+
+#app input {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.lists {
+  display: flex;
+  font-size: 14px;
+}
+
+ul.link-list {
+  width: 500px;
+  list-style-type: none;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.link-list li > div {
+  margin: 0;
+  padding: 5px 5px 5px 30px;
+  margin-bottom: 2px;
+  overflow: hidden;
+  background-color: #fafafa;
+}
+
+.link-list li > div div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.link-list li p {
+  flex: 1 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 80%;
+}
+
+.link-list .title, .link-list .url {
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.link-list .url {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.link-list .title .score, .link-list .url .score {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.link-list .url .score {
+  top: 23px;
+}

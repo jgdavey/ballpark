@@ -1,0 +1,20 @@
+{:deps   {:aliases [:dev]}
+ :nrepl  {:port 9009}
+ :builds {:main {:target           :browser
+                 :output-dir       "resources/public/js/main"
+                 :asset-path       "/js/main"
+                 :compiler-options {:output-feature-set :es7}
+                 :modules          {:main {:init-fn ballpark-demo.core/main}}
+                 :devtools         {:watch-dir          "resources/public"
+                                    :http-resource-root "public"
+                                    :http-root          "resources/public/js/main"
+                                    :http-port          4444}}
+
+          :test {:target           :browser-test
+                 :test-dir         "resources/public/js/test"
+                 :ns-regexp        "-test$"
+                 ;; static required for mocking to work
+                 :compiler-options {:static-fns false}
+                 :devtools         {:http-port          8022
+                                    :http-resource-root "public"
+                                    :http-root          "resources/public/js/test"}}}}
