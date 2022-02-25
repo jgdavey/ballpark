@@ -2,11 +2,30 @@
 
 Fuzzy string matching and ranking.
 
+[![img](https://img.shields.io/clojars/v/com.joshuadavey/ballpark.svg "Clojars project")](https://clojars.org/com.joshuadavey/ballpark)
+
 This library was originally inspired by [fwextensions/quick-score](https://github.com/fwextensions/quick-score), which itself was inspired by QuickSilver.app. The algorithm for quick-score (used in the QuicKey browser extension), as well as that for QuickSilver are provided in this library, but are not the default.
 
 The default searcher requires that query characters appear in the order that they appear in the source string to be considered a "match".
 
 The main use-case for this style of searching is to jump as quickly as possible, especially for keyboard-based navigation and commands.
+
+
+## Installation
+
+Add the latest version of library to your app.
+
+For leiningen or boot:
+
+```clojure
+[com.joshuadavey/ballpark "<version>"]}
+```
+
+or, for deps.edn:
+
+```clojure
+{com.joshuadavey/ballpark {:mvn/version "<latest version>"}}
+```
 
 
 ## Example usage

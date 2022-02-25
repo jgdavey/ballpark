@@ -6,6 +6,9 @@
 
 Fuzzy string matching and ranking.
 
+#+CAPTION: Clojars project
+[[https://clojars.org/com.joshuadavey/ballpark][https://img.shields.io/clojars/v/com.joshuadavey/ballpark.svg]]
+
 This library was originally inspired by [[https://github.com/fwextensions/quick-score][fwextensions/quick-score]],
 which itself was inspired by QuickSilver.app. The algorithm for
 quick-score (used in the QuicKey browser extension), as well as that
@@ -17,6 +20,20 @@ order that they appear in the source string to be considered a
 
 The main use-case for this style of searching is to jump as quickly as
 possible, especially for keyboard-based navigation and commands.
+
+** Installation
+
+Add the latest version of library to your app.
+
+For leiningen or boot:
+#+begin_src clojure :exports code :eval never
+[com.joshuadavey/ballpark "<version>"]}
+#+end_src
+
+or, for deps.edn:
+#+begin_src clojure :exports code :eval never
+{com.joshuadavey/ballpark {:mvn/version "<latest version>"}}
+#+end_src
 
 ** Example usage
 Let's say we have a bunch of restaurants:
