@@ -1,11 +1,11 @@
 {:paths ["src" "resources"]
- :deps {org.clojure/clojure {:mvn/version "1.10.3"}}
+ :deps {org.clojure/clojure {:mvn/version "1.11.3"}}
  :aliases
  {:test {:extra-paths ["test"]
          :extra-deps {org.clojure/test.check {:mvn/version "1.1.1"}}}
   :dev  {:extra-paths ["test" "bench"]
          :extra-deps {org.clojure/test.check {:mvn/version "1.1.1"}
-                      cheshire/cheshire {:mvn/version "5.11.0"}
+                      cheshire/cheshire {:mvn/version "5.13.0"}
                       criterium/criterium {:mvn/version "0.4.6"}}}
   :test-clj
   {:extra-deps {com.cognitect/test-runner
@@ -14,15 +14,15 @@
    :main-opts ["-m" "cognitect.test-runner"
                "-d" "test"]}
   :test-cljs
-  {:extra-deps {olical/cljs-test-runner {:mvn/version "3.8.0"}}
+  {:extra-deps {olical/cljs-test-runner {:mvn/version "3.8.1"}}
    :main-opts ["-m" "cljs-test-runner.main"]}
   :jar {:replace-deps {com.github.seancorfield/depstar {:mvn/version "2.1.303"}}
         :exec-fn hf.depstar/jar
         :exec-args {:jar "ballpark.jar" :sync-pom true}}
-  :install {:replace-deps {slipset/deps-deploy {:mvn/version "0.2.1"}}
+  :install {:replace-deps {slipset/deps-deploy {:mvn/version "0.2.2"}}
             :exec-fn deps-deploy.deps-deploy/deploy
             :exec-args {:installer :local :artifact "ballpark.jar"}}
-  :deploy {:replace-deps {slipset/deps-deploy {:mvn/version "0.2.1"}}
+  :deploy {:replace-deps {slipset/deps-deploy {:mvn/version "0.2.2"}}
            :exec-fn deps-deploy.deps-deploy/deploy
            :exec-args {:installer :remote
                        :sign-releases? true
