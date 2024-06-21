@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.joshuadavey</groupId>
   <artifactId>ballpark</artifactId>
-  <version>0.1.0</version>
+  <version>0.2.1</version>
   <name>ballpark</name>
   <description>Fuzzy search and ranking</description>
   <url>https://github.com/jgdavey/ballpark</url>
@@ -22,7 +22,7 @@
     <url>https://github.com/jgdavey/ballpark</url>
     <connection>scm:git:git://github.com/jgdavey/ballpark.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/jgdavey/ballpark.git</developerConnection>
-    <tag>v0.2.0</tag>
+    <tag>v0.2.1</tag>
   </scm>
   <dependencies>
     <dependency>
