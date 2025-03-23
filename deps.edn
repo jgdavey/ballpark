@@ -16,14 +16,6 @@
   :test-cljs
   {:extra-deps {olical/cljs-test-runner {:mvn/version "3.8.1"}}
    :main-opts ["-m" "cljs-test-runner.main"]}
-  :jar {:replace-deps {com.github.seancorfield/depstar {:mvn/version "2.1.303"}}
-        :exec-fn hf.depstar/jar
-        :exec-args {:jar "ballpark.jar" :sync-pom true}}
-  :install {:replace-deps {slipset/deps-deploy {:mvn/version "0.2.2"}}
-            :exec-fn deps-deploy.deps-deploy/deploy
-            :exec-args {:installer :local :artifact "ballpark.jar"}}
-  :deploy {:replace-deps {slipset/deps-deploy {:mvn/version "0.2.2"}}
-           :exec-fn deps-deploy.deps-deploy/deploy
-           :exec-args {:installer :remote
-                       :sign-releases? true
-                       :artifact "ballpark.jar"}}}}
+  :build {:deps {io.github.clojure/tools.build {:git/tag "v0.10.7" :git/sha "573711e"}
+                 slipset/deps-deploy {:mvn/version "0.2.2"}}
+          :ns-default build}}}
